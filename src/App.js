@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./styles.css";
+import BackgroundImg from "./components/BackgroundImg";
+import MainContent from "./components/MainContent";
+import { useState, useEffect } from "react";
+import Card from "./components/Card";
 
 function App() {
+  const [cards, setCards] = useState([]);
+
+  const fetchCards = () => {
+    fetch(
+      "https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setCards(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    fetchCards();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="backgroundImg">
+        <BackgroundImg />
+      </div>
+      <div className="mainContent">
+        <MainContent cards={cards}>
+          {cards.map((cardObj) => (
+            <Card key={cardObj.name} {...cardObj} setCards={setCards} />
+          ))}
+        </MainContent>
+      </div>
     </div>
   );
 }

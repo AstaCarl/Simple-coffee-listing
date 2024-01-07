@@ -1,0 +1,46 @@
+.centerBox{
+    background-color: #1B1D1F;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    background-image: url(../Img/vector.svg);
+    background-repeat: no-repeat;
+    background-position: 22rem 2rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .centerBox{
+        padding: 6rem;
+        background-position: 27rem 3.5rem;
+        width: 60%;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr)); /* Adjust the minmax values as needed */
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+
+  }
+
+  @media only screen and (min-width: 1280px) {
+
+    .centerBox{
+        background-position: 35rem 3.5rem;
+        width: 75%;
+    }
+  
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+
+  }

@@ -1,0 +1,67 @@
+.column{
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.icon{
+    width: 1.5rem;
+}
+
+.productImg{
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.popular{
+    position: absolute;
+    background-color: #F6C768;
+    z-index: 2;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: fit-content;
+    border-radius: 5rem;
+    padding: 0.4rem 1rem;
+}
+
+.popular p{
+    margin: 0;
+}
+
+.price{
+    background-color: #BEE3CC;
+    width: fit-content;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.price p{
+    margin: 0;
+}
+
+.between{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start{
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.start h2, .start p{
+    margin: 0;
+    margin-left: 0.5rem;
+}
+
+.soldOut{
+    color: #ED735D;
+    font-weight: 500;
+}
+
+
+.spacer{
+    flex: 1;
+}

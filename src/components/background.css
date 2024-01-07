@@ -1,0 +1,18 @@
+.color{
+    background-color: #111315;
+    height: 400vh;
+}
+
+.backgroundImage{
+    background-image: url(../Img/bg-cafe.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1025px) {
+
+    .color{
+        height: 200vh;
+    }
+  }
